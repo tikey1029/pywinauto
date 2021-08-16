@@ -1,0 +1,41 @@
+from pywinauto.application import Application
+from pywinauto import mouse
+from pywinauto import keyboard
+import os
+import time
+
+os.environ.update({"__COMPAT_LAYER":"RUnAsInvoker"})
+app = Application(backend="win32").start(r'C:\Neurons\HealthSoftware6\HealthSoftware\HealthSoftware\StartHealthSoftware.exe')
+app = Application().connect(path=r'C:\Neurons\HealthSoftware6\HealthSoftware\HealthSoftware\StartHealthSoftware.exe')
+time.sleep(5)
+mouse.click(coords=(1056,584))
+time.sleep(1)
+app.window(title_re='纽若思睡眠分析软件  Ver: 1.0.2100.1947',class_name='WindowsForms10.Window.8.app.0.20702d9_r6_ad1').print_control_identifiers()
+# mouse.click(coords=(400,160))
+# keyboard.send_keys('tikey')
+# time.sleep(.5)
+# mouse.click(coords=(397,209))
+# keyboard.send_keys('16')
+# time.sleep(.5)
+# mouse.click(coords=(397,303))
+# keyboard.send_keys('2')
+# time.sleep(.5)
+# mouse.click(coords=(395,351))
+# keyboard.send_keys('{DOWN}{ENTER}')
+# time.sleep(.5)
+# mouse.click(coords=(750,206))
+# keyboard.send_keys('5')
+# time.sleep(.5)
+# mouse.click(coords=(750,255))
+# keyboard.send_keys('886')
+# time.sleep(.5)
+# mouse.click(coords=(750,305))
+# keyboard.send_keys('886')
+# time.sleep(.5)
+# mouse.click(coords=(750,350))
+# keyboard.send_keys('886')
+# time.sleep(.5)
+# mouse.click(coords=(550,560))
+# time.sleep(1)
+# mouse.click(coords=(950,590))
+
